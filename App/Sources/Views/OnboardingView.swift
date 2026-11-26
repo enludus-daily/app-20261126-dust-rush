@@ -68,6 +68,9 @@ struct OnboardingView: View {
             "The dotted line leads to the dock. Watch \"Home %\" and don't get greedy. Your progress stays on this iPhone.")][p]
     }
 
+    /// 撮影・動きを減らす設定・UI テスト（押せるかの確かめが動きで待たされる）では止めた絵
+    private var still: Bool { model.still || model.reduceMotion || Launch.isFreshUITest }
+
     @ViewBuilder
     private func illustration(_ p: Int) -> some View {
         if p == 1 {
@@ -89,8 +92,8 @@ struct OnboardingView: View {
             .frame(maxHeight: .infinity)
         } else if worlds.count == 2 && p == 0 {
             // 動く見本：ロボがなぞった道を進み、床がぴかぴかになっていく（4 秒でくり返す）
-            TimelineView(.animation(minimumInterval: 1.0 / 30, paused: model.still || model.reduceMotion)) { tl in
-                let t = model.still || model.reduceMotion ? 0.75 : tl.date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: 4) / 4
+            TimelineView(.animation(minimumInterval: 1.0 / 20, paused: still)) { tl in
+                let t = still ? 0.75 : tl.date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: 4) / 4
                 Canvas { ctx, size in
                     let map = RoomMap(size: size)
                     // 床と膜は最初に作った 1 枚。通った道は白い太い線で光らせる（毎こま膜を作り直さない）
