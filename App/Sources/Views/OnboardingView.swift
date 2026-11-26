@@ -81,6 +81,21 @@ struct OnboardingView: View {
             }
             .frame(maxWidth: 340)
             .frame(maxHeight: .infinity)
+        } else if worlds.count == 2 && p == 0 {
+            // 動く見本：ロボがなぞった道を進み、床がぴかぴかになっていく（4 秒でくり返す）
+            TimelineView(.animation(minimumInterval: 1.0 / 30, paused: model.still || model.reduceMotion)) { tl in
+                let t = model.still || model.reduceMotion ? 0.75 : tl.date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: 4) / 4
+                let w = OnboardingView.drive(worlds[0], progress: t)
+                Canvas { ctx, size in
+                    RoomDrawing(world: w, time: t * 4, skin: .snow, showPath: false, mask: MaskCache.make(w)).draw(&ctx, size: size)
+                    // 指の印
+                    let map = RoomMap(size: size)
+                    let f = map.pt(OnboardingView.route(min(1, t + 0.12)))
+                    ctx.fill(Path(ellipseIn: CGRect(x: f.x - 14, y: f.y - 14, width: 28, height: 28)), with: .color(Theme.lavenderDeep.opacity(0.25)))
+                    ctx.stroke(Path(ellipseIn: CGRect(x: f.x - 14, y: f.y - 14, width: 28, height: 28)), with: .color(Theme.lavenderDeep.opacity(0.7)), lineWidth: 2)
+                }
+            }
+            .accessibilityHidden(true)
         } else if worlds.count == 2 {
             let w = worlds[p == 0 ? 0 : 1]
             Canvas { ctx, size in
@@ -92,11 +107,25 @@ struct OnboardingView: View {
         }
     }
 
+    /// 見本の道：ドックから左上へ、S 字に
+    static func route(_ t: Double) -> Vec {
+        let pts = [Vec(x: 250, y: 534), Vec(x: 250, y: 420), Vec(x: 80, y: 420), Vec(x: 80, y: 320), Vec(x: 290, y: 320), Vec(x: 290, y: 230), Vec(x: 140, y: 230)]
+        let x = max(0, min(1, t)) * Double(pts.count - 1)
+        let i = min(pts.count - 2, Int(x))
+        let f = x - Double(i)
+        return pts[i] + (pts[i + 1] - pts[i]) * f
+    }
+
+    static func drive(_ base: World, progress t: Double) -> World {
+        var w = base
+        w.paint(stride(from: 0.0, through: t, by: 0.01).map(route), radius: 22)
+        w.place(robotAt: route(t))
+        return w
+    }
+
     static func makeWorlds() -> [World] {
         var a = World(plan: Rooms.numbered(1), seed: 3)
-        a.paint(stride(from: 0.0, through: 1, by: 0.02).map { t in Vec(x: 250 - 120 * t, y: 534 - 260 * t) }, radius: 22)
-        a.place(robotAt: Vec(x: 130, y: 274))
-        for i in 0..<6 { a.drop(.fluff, at: Vec(x: 110 + Double(i % 3) * 22, y: 230 - Double(i / 3) * 18)) }
+        for i in 0..<6 { a.drop(.fluff, at: Vec(x: 160 + Double(i % 3) * 22, y: 200 - Double(i / 3) * 18)) }
         var b = World(plan: Rooms.numbered(2), seed: 4)
         b.paint(stride(from: 0.0, through: 1, by: 0.01).map { t in Vec(x: 30 + 300 * t, y: 470) }, radius: 22)
         b.paint(stride(from: 0.0, through: 1, by: 0.01).map { t in Vec(x: 330 - 300 * t, y: 420) }, radius: 22)
