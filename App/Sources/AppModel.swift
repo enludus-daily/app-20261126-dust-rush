@@ -232,7 +232,7 @@ final class AppModel {
         loop = Task { [weak self] in
             var last = Date()
             while !Task.isCancelled {
-                try? await Task.sleep(for: .milliseconds(16))
+                try? await Task.sleep(for: .milliseconds(Launch.isFreshUITest ? 50 : 16))
                 guard let self else { return }
                 let t = Date()
                 let dt = min(0.05, t.timeIntervalSince(last))

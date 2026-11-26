@@ -24,8 +24,13 @@ final class MaskCache {
     private var planID = ""
     private(set) var image: CGImage?
 
+    private var built = Date.distantPast
+
     func image(for w: World) -> CGImage? {
         if w.maskVersion == version && w.plan.id == planID, let image { return image }
+        // 作り直しは 1 秒に 10 回まで（部屋が変わったときはすぐ）
+        if w.plan.id == planID, let image, Date().timeIntervalSince(built) < 0.1 { return image }
+        built = Date()
         version = w.maskVersion
         planID = w.plan.id
         image = MaskCache.make(w)

@@ -69,7 +69,7 @@ struct RoomStage: View {
         GeometryReader { geo in
             let map = RoomMap(size: geo.size)
             ZStack(alignment: .top) {
-                TimelineView(.animation(minimumInterval: 1.0 / 60, paused: model.still)) { tl in
+                TimelineView(.animation(minimumInterval: Launch.isFreshUITest ? 1.0 / 20 : 1.0 / 60, paused: model.still || model.paused || model.roomCard != nil || model.hud.choices != nil)) { tl in
                     Canvas { ctx, size in
                         let w = model.world
                         var drawing = RoomDrawing(world: w, time: model.still ? 1.2 : tl.date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: 1000),
