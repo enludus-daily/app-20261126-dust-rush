@@ -42,7 +42,7 @@ final class MaskCache {
                 // 前乗算アルファ：白 0.22
                 px[o] = 56; px[o + 1] = 56; px[o + 2] = 56; px[o + 3] = 56
             } else {
-                let a = 0.36
+                let a = 0.32
                 px[o] = UInt8(156 * a); px[o + 1] = UInt8(143 * a); px[o + 2] = UInt8(128 * a); px[o + 3] = UInt8(255 * a)
             }
         }

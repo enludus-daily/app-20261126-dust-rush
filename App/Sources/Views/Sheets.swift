@@ -362,6 +362,10 @@ struct PaywallSheet: View {
                     .buttonStyle(PillButtonStyle(fill: Theme.lavenderDeep, edge: Color(hex: 0x4E3F96)))
                     .disabled(buying)
                     .accessibilityIdentifier("main.buy")
+                } else if model.still {
+                    // 撮影（審査用の画像）：本番と同じ値段の見本
+                    Button {} label: { Text(trf("%@ で Pro にする", "Get Pro for %@", "¥480")) }
+                        .buttonStyle(PillButtonStyle(fill: Theme.lavenderDeep, edge: Color(hex: 0x4E3F96)))
                 } else {
                     Text(model.purchases.loadState == .loading ? tr("読み込み中…", "Loading…")
                                                                 : tr("いまは購入できません。通信を確かめて、あとでもう一度開いてください。", "Purchases aren't available right now. Check your connection and try again later."))

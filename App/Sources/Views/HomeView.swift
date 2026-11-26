@@ -74,7 +74,7 @@ struct HomeView: View {
             RobotMark().frame(width: 52, height: 52)
             VStack(alignment: .leading, spacing: 0) {
                 Text(tr("すいこみロボ", "Dust Rush")).font(Theme.title(30)).kerning(-0.5).foregroundStyle(Theme.ink)
-                Text(tr("吸って、強くなって、充電が切れる前に帰る", "Vacuum, upgrade, and get home before the battery dies"))
+                Text(tr("吸って、強くなって、ドックへ帰る", "Vacuum, upgrade, get home"))
                     .font(Theme.body(12)).foregroundStyle(Theme.inkSoft).lineLimit(2).minimumScaleFactor(0.8)
             }
             Spacer(minLength: 0)

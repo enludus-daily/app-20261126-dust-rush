@@ -947,13 +947,13 @@
         }
       }
     },
-    "吸って、強くなって、充電が切れる前に帰る": {
+    "吸って、強くなって、ドックへ帰る": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vacuum, upgrade, and get home before the battery dies"
+            "value": "Vacuum, upgrade, get home"
           }
         }
       }
@@ -1504,6 +1504,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "30 rooms instead of 10"
+          }
+        }
+      }
+    },
+    "部屋を指でなぞって進もう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drag on the floor to drive"
           }
         }
       }

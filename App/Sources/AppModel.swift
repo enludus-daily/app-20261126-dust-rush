@@ -26,6 +26,7 @@ struct Hud: Equatable {
     var choices: [Upgrade]?
     var homing = false
     var lost: World.LostState = .hidden
+    var started = false
 }
 
 struct Banner: Equatable, Identifiable {
@@ -124,6 +125,8 @@ final class AppModel {
     var practiceActive: Bool { isPro && practiceOn }
     var runScore: Int { outcomes.map(Score.room).reduce(0, +) }
     var levels: [Upgrade: Int] { world.levels }
+    /// はじめての部屋で、まだドックから出ていないあいだの案内
+    var showDriveHint: Bool { !hud.started && save.roomsCleaned == 0 && roomIndex == 0 && roomCard == nil }
     var isDaily: Bool { if case .daily = run { true } else { false } }
 
     func courseRooms(_ n: Int) -> [RoomPlan] {
@@ -273,6 +276,7 @@ final class AppModel {
         h.choices = w.choices
         h.homing = w.homing
         h.lost = w.lost
+        h.started = w.leftDock
         if h != hud { hud = h }
     }
 

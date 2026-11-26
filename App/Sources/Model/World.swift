@@ -316,6 +316,8 @@ struct World: Sendable {
 
     private mutating func drain(_ dt: Double) {
         guard !practice else { return }
+        // ドックに乗っているあいだ（出発前）は減らない
+        if !leftDock && robot.distance(to: plan.dock) < 30 { return }
         charge -= (moving ? stats.moveDrain : stats.idleDrain) * dt
         for level in World.warnLevels where !warned.contains(level) && chargeRatio * 100 <= Double(level) {
             warned.insert(level)

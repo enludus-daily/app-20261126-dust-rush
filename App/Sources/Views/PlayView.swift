@@ -10,17 +10,21 @@ struct PlayView: View {
         ZStack {
             Theme.wall.ignoresSafeArea()
             if sizeClass == .regular {
-                HStack(spacing: 20) {
-                    RoomStage()
-                    VStack(spacing: 14) {
-                        HudPanel(wide: true)
-                        UpgradeShelf()
-                        Spacer(minLength: 0)
-                        PlayButtons()
+                GeometryReader { geo in
+                    // 右の板は画面の 4 割まで（狭い画面でも部屋が小さくなりすぎない）
+                    let panel = min(320, max(210, geo.size.width * 0.4))
+                    HStack(spacing: 16) {
+                        RoomStage()
+                        VStack(spacing: 12) {
+                            HudPanel(wide: true)
+                            UpgradeShelf()
+                            Spacer(minLength: 0)
+                            PlayButtons(stacked: panel < 280)
+                        }
+                        .frame(width: panel)
                     }
-                    .frame(width: 300)
+                    .padding(16)
                 }
-                .padding(20)
             } else {
                 VStack(spacing: 8) {
                     HudPanel(wide: false)
@@ -85,6 +89,19 @@ struct RoomStage: View {
                         }
                         .onEnded { _ in touching = false }
                 )
+                if model.showDriveHint {
+                    let p = map.pt(model.room.dock + Vec(x: 0, y: -90))
+                    VStack(spacing: 4) {
+                        Text(tr("部屋を指でなぞって進もう", "Drag on the floor to drive")).font(Theme.body(14, weight: .bold)).foregroundStyle(Theme.ink)
+                        Image(systemName: "arrow.down").font(.system(size: 14, weight: .heavy)).foregroundStyle(Theme.mintDeep)
+                    }
+                    .padding(.horizontal, 14).padding(.vertical, 8)
+                    .background(Capsule().fill(Theme.card.opacity(0.95)))
+                    .overlay(Capsule().stroke(Theme.mintDeep.opacity(0.4), lineWidth: 1.5))
+                    .position(x: p.x, y: p.y)
+                    .allowsHitTesting(false)
+                    .transition(.opacity)
+                }
                 if let banner = model.banner {
                     BannerView(banner: banner)
                         .padding(.top, map.origin.y + 10)
@@ -233,9 +250,11 @@ struct CleanMeter: View {
 /// 下に固定するボタン（幅は半分ずつ。0 にならない）
 struct PlayButtons: View {
     @Environment(AppModel.self) private var model
+    var stacked = false
 
     var body: some View {
-        HStack(spacing: 12) {
+        let layout = stacked ? AnyLayout(VStackLayout(spacing: 8)) : AnyLayout(HStackLayout(spacing: 12))
+        layout {
             Button { model.togglePause() } label: {
                 Label(tr("止める", "Pause"), systemImage: "pause.fill")
             }
