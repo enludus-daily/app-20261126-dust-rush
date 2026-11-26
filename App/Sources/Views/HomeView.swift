@@ -177,7 +177,7 @@ struct DailyCard: View {
             }
             HStack(spacing: 10) {
                 Button { model.press(); model.startDaily() } label: {
-                    Label(model.dailyDone ? tr("もう一度", "Play again") : tr("今日の家を掃除", "Clean today's house"), systemImage: "sun.max.fill")
+                    Label(model.dailyDone ? tr("もう一度", "Play again") : tr("今日の家を掃除", "Play today"), systemImage: "sun.max.fill")
                 }
                 .buttonStyle(PillButtonStyle(fill: Theme.peachDeep, edge: Color(hex: 0x8E4528)))
                 .accessibilityIdentifier("main.daily")
