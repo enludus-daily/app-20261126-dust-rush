@@ -3,15 +3,23 @@
   "products": [
     {
       "type": "NON_CONSUMABLE",
-      "productId": "com.enludus.daily.template.pro",
-      "referenceName": "Pro",
+      "productId": "com.enludus.daily.019.pro",
+      "referenceName": "Dust Rush Pro",
       "price": 480,
       "familySharable": true,
-      "reviewNote": "Pro を買うと、すべての〇〇と詳しい振り返りが使えます。課金の画面は設定 > Pro から開けます。",
+      "reviewNote": "Pro を買うと、部屋が 10 から 30 に増え（コース 3〜6）、強化の候補が 4 つになり、過去 30 日の毎日の家・ロボの色と形 5 種・練習モードが使えます。課金の画面はホームの右上の設定 > Pro を見る、またはコース 3 を押すと開けます。",
       "reviewScreenshot": "docs/iap/paywall.png",
       "localizations": [
-        {"locale": "ja", "name": "Pro", "description": "すべての〇〇と詳しい振り返り"},
-        {"locale": "en-US", "name": "Pro", "description": "All 〇〇 and detailed reviews"}
+        {
+          "locale": "ja",
+          "name": "すいこみロボ Pro",
+          "description": "30 部屋・強化の候補 4 つ・過去 30 日の家・ロボ 5 種・練習"
+        },
+        {
+          "locale": "en-US",
+          "name": "Dust Rush Pro",
+          "description": "30 rooms, 4 upgrade picks, past days, robot looks"
+        }
       ]
     }
   ]

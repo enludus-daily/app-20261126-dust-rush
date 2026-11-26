@@ -1,5 +1,5 @@
 import Testing
-@testable import DailyApp
+@testable import DustRush
 
 struct EntitlementsTests {
     let bundle = "com.enludus.daily.template"

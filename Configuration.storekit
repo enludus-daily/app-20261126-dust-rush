@@ -1,0 +1,21 @@
+{
+  "identifier" : "D057A019",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "480",
+      "familyShareable" : true,
+      "internalID" : "D057A019-0001",
+      "localizations" : [
+        { "description" : "30 部屋・強化の候補 4 つ・過去 30 日の家・ロボ 5 種・練習", "displayName" : "すいこみロボ Pro", "locale" : "ja" },
+        { "description" : "30 rooms, 4 upgrade picks, past days, robot looks", "displayName" : "Dust Rush Pro", "locale" : "en_US" }
+      ],
+      "productID" : "com.enludus.daily.019.pro",
+      "referenceName" : "Dust Rush Pro",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : { "_locale" : "ja_JP", "_storefront" : "JPN" },
+  "subscriptionGroups" : [],
+  "version" : { "major" : 3, "minor" : 0 }
+}

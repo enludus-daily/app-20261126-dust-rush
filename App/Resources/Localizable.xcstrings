@@ -1,42 +1,1520 @@
 {
   "sourceLanguage": "ja",
   "strings": {
-    "はじめる": {
+    "%@ %@ — 持ち帰れるかな": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start"
+            "value": "%@ %@ — can you bring it home?"
           }
         }
       }
     },
-    "リセット": {
+    "%@ で Pro にする": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reset"
+            "value": "Get Pro for %@"
           }
         }
       }
     },
-    "1 たす": {
+    "%@ の家": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add 1"
+            "value": "House of %@"
           }
         }
       }
     },
-    "回数 %lld": {
+    "%@。きれいさ %d%%、充電 %d%%": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Count %lld"
+            "value": "%@. %d%% clean, %d%% charge"
+          }
+        }
+      }
+    },
+    "%d こ・%d 部屋": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d · %d rooms"
+          }
+        }
+      }
+    },
+    "%d 日つづけて": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d-day streak"
+          }
+        }
+      }
+    },
+    "%d 点": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d pts"
+          }
+        }
+      }
+    },
+    "1 回買うだけ。広告もサブスクもありません。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pay once. No ads, no subscription."
+          }
+        }
+      }
+    },
+    "3 つから 1 つ選んで、ブラシを伸ばす・速くする・電池を大きくする。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick 1 of 3: longer brushes, faster wheels, a bigger battery and more."
+          }
+        }
+      }
+    },
+    "Pro を使っています": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pro is active"
+          }
+        }
+      }
+    },
+    "Pro を使っています。ありがとう！": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You have Pro. Thank you!"
+          }
+        }
+      }
+    },
+    "Pro を見る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See Pro"
+          }
+        }
+      }
+    },
+    "「帰りに ○%」が充電に近づいたら、帰る合図。点線がドックへの道です。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When \"Home %\" gets close to your charge, head back. The dotted line shows the way."
+          }
+        }
+      }
+    },
+    "いっぱいで強化": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Full = upgrade"
+          }
+        }
+      }
+    },
+    "いまの強化": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UPGRADES"
+          }
+        }
+      }
+    },
+    "いまは購入できません。通信を確かめて、あとでもう一度開いてください。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purchases aren't available right now. Check your connection and try again later."
+          }
+        }
+      }
+    },
+    "おむすび": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rice ball"
+          }
+        }
+      }
+    },
+    "おもちゃだらけ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toys Everywhere"
+          }
+        }
+      }
+    },
+    "おもちゃだらけの家・ねこといぬの家など 4 コース": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4 more courses: toy-filled homes, cats & dogs"
+          }
+        }
+      }
+    },
+    "おもちゃだらけ・2": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toys Everywhere II"
+          }
+        }
+      }
+    },
+    "きれいさ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clean"
+          }
+        }
+      }
+    },
+    "きれいさ %d%%": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d%% clean"
+          }
+        }
+      }
+    },
+    "しろ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Snow"
+          }
+        }
+      }
+    },
+    "すいこみロボ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dust Rush"
+          }
+        }
+      }
+    },
+    "すいこみロボ %@\\n%@ %d 点\\n#すいこみロボ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dust Rush %@\\n%@ %d pts\\n#DustRush"
+          }
+        }
+      }
+    },
+    "すいこみロボ Pro": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dust Rush Pro"
+          }
+        }
+      }
+    },
+    "ぜんぶの部屋がぴかぴか": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Every room sparkles"
+          }
+        }
+      }
+    },
+    "なぞった方へ進む": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drag to drive"
+          }
+        }
+      }
+    },
+    "ねこといぬの家": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cats & Dogs"
+          }
+        }
+      }
+    },
+    "ねこといぬの家・2": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cats & Dogs II"
+          }
+        }
+      }
+    },
+    "ねこ耳": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cat ears"
+          }
+        }
+      }
+    },
+    "ひとやすみ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paused"
+          }
+        }
+      }
+    },
+    "ひとり暮らしの部屋": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Small Apartment"
+          }
+        }
+      }
+    },
+    "ふかふかバンパー": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soft Bumper"
+          }
+        }
+      }
+    },
+    "まだ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not yet"
+          }
+        }
+      }
+    },
+    "もう一度": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play again"
+          }
+        }
+      }
+    },
+    "やめてホームへ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit to home"
+          }
+        }
+      }
+    },
+    "コース %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Course %d"
+          }
+        }
+      }
+    },
+    "コース %d をはじめる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start course %d"
+          }
+        }
+      }
+    },
+    "コース %d をもう一度": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Replay course %d"
+          }
+        }
+      }
+    },
+    "コースの結果": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "COURSE RESULT"
+          }
+        }
+      }
+    },
+    "コース（5 部屋ずつ）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "COURSES · 5 ROOMS EACH"
+          }
+        }
+      }
+    },
+    "ゴミ箱": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dust bin"
+          }
+        }
+      }
+    },
+    "ゴミ箱がいっぱい": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DUST BIN FULL"
+          }
+        }
+      }
+    },
+    "ゴミ箱がいっぱいで強化": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Full bin = upgrade"
+          }
+        }
+      }
+    },
+    "ゴミ箱がいっぱいになると、3 つから 1 つ選べます": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fill the bin to pick 1 of 3 upgrades."
+          }
+        }
+      }
+    },
+    "ゴミ箱がいっぱいのとき、選べる札が 1 枚増える": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One more card every time the bin fills"
+          }
+        }
+      }
+    },
+    "サイドブラシ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Side Brush"
+          }
+        }
+      }
+    },
+    "ソファの下から出てきたもの": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Found under the sofa"
+          }
+        }
+      }
+    },
+    "ドックに帰った": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BACK AT THE DOCK"
+          }
+        }
+      }
+    },
+    "ドックの点線が帰り道。早めに帰ろう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The dotted line leads home. Head back soon."
+          }
+        }
+      }
+    },
+    "ドックへ帰る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Head home"
+          }
+        }
+      }
+    },
+    "ドックまで帰れなかった…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Didn't make it back to the dock…"
+          }
+        }
+      }
+    },
+    "ピーチ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peach"
+          }
+        }
+      }
+    },
+    "ブラシは自動で回って、近くのほこりを吸いこみます。通った床がぴかぴかに。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brushes spin on their own and pull in nearby dust. Every path you drive starts to shine."
+          }
+        }
+      }
+    },
+    "ホームへ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Home"
+          }
+        }
+      }
+    },
+    "ミント": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mint"
+          }
+        }
+      }
+    },
+    "ミント・ラベンダー・ピーチ・ねこ耳・おむすび": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mint, lavender, peach, cat ears, rice ball"
+          }
+        }
+      }
+    },
+    "ラベンダー": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lavender"
+          }
+        }
+      }
+    },
+    "レベル %d / %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Level %d of %d"
+          }
+        }
+      }
+    },
+    "ロボの色と形": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ROBOT LOOK"
+          }
+        }
+      }
+    },
+    "ロボの色と形 5 種": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "5 robot looks"
+          }
+        }
+      }
+    },
+    "ロボの調子": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Robot settings"
+          }
+        }
+      }
+    },
+    "今日": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today"
+          }
+        }
+      }
+    },
+    "今日のいちばん %d 点": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's best: %d pts"
+          }
+        }
+      }
+    },
+    "今日の家": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TODAY'S HOUSE"
+          }
+        }
+      }
+    },
+    "今日の家 %d/%d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TODAY %d/%d"
+          }
+        }
+      }
+    },
+    "今日の家を掃除": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clean today's house"
+          }
+        }
+      }
+    },
+    "何か落ちてる！": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Something's on the floor!"
+          }
+        }
+      }
+    },
+    "充電": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Charge"
+          }
+        }
+      }
+    },
+    "充電 +20（いま 20 足す）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Charge +20, refilled now"
+          }
+        }
+      }
+    },
+    "充電が切れる前に帰る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get home before the battery dies"
+          }
+        }
+      }
+    },
+    "充電が減ってくると、部屋の隅に落とし物が出ます。取りにいくと帰りはぎりぎり。持ったままドックに帰ると、ここに並びます。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "As your battery runs low, a lost item appears in a far corner. Grabbing it makes the trip home tight. Carry it back to the dock to keep it here."
+          }
+        }
+      }
+    },
+    "充電が減らない。記録には残りません": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Battery never drains. Not recorded."
+          }
+        }
+      }
+    },
+    "充電が減らない部屋で、道すじを試せる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try routes without the battery draining"
+          }
+        }
+      }
+    },
+    "充電の減り −15%": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Battery drain −15%"
+          }
+        }
+      }
+    },
+    "充電は減りません。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your battery won't drain."
+          }
+        }
+      }
+    },
+    "充電切れ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Battery out"
+          }
+        }
+      }
+    },
+    "充電切れでおしまい": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Battery ran out"
+          }
+        }
+      }
+    },
+    "充電切れ！": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OUT OF BATTERY"
+          }
+        }
+      }
+    },
+    "共有": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share"
+          }
+        }
+      }
+    },
+    "効果音": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sound effects"
+          }
+        }
+      }
+    },
+    "吸いこむ輪 +10、毛玉も早く": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pull range +10, hairballs faster"
+          }
+        }
+      }
+    },
+    "吸う力": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suction"
+          }
+        }
+      }
+    },
+    "吸ったほこり": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dust collected"
+          }
+        }
+      }
+    },
+    "吸ったほこり %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dust picked up: %d"
+          }
+        }
+      }
+    },
+    "吸って、強くなって、充電が切れる前に帰る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vacuum, upgrade, and get home before the battery dies"
+          }
+        }
+      }
+    },
+    "大きい毛玉がどんどん来る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Big hairballs keep rolling in"
+          }
+        }
+      }
+    },
+    "大きな電池": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Big Battery"
+          }
+        }
+      }
+    },
+    "家具のふちから、ほこりがわく": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dust bunnies creep out from under the furniture"
+          }
+        }
+      }
+    },
+    "家族の家": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Family House"
+          }
+        }
+      }
+    },
+    "帰りに %d%%": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Home %d%%"
+          }
+        }
+      }
+    },
+    "床のブロックが帰り道をふさぐ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toy blocks get in the way home"
+          }
+        }
+      }
+    },
+    "強化の候補が 4 つに": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4 upgrade choices"
+          }
+        }
+      }
+    },
+    "強化をひとつ選ぶ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick an upgrade"
+          }
+        }
+      }
+    },
+    "手続き中…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Processing…"
+          }
+        }
+      }
+    },
+    "承認を待っています。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for approval."
+          }
+        }
+      }
+    },
+    "持ち帰った落とし物": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LOST ITEMS FOUND"
+          }
+        }
+      }
+    },
+    "振動": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haptics"
+          }
+        }
+      }
+    },
+    "掃除できる幅 +27%": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cleaning width +27%"
+          }
+        }
+      }
+    },
+    "掃除にもどる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep cleaning"
+          }
+        }
+      }
+    },
+    "掃除をはじめる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start cleaning"
+          }
+        }
+      }
+    },
+    "次の部屋へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next room"
+          }
+        }
+      }
+    },
+    "次へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next"
+          }
+        }
+      }
+    },
+    "止める": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause"
+          }
+        }
+      }
+    },
+    "残り %d%%": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d%% left"
+          }
+        }
+      }
+    },
+    "毎日ちがう 5 部屋。だれでも同じ家。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "5 new rooms every day — the same house for everyone."
+          }
+        }
+      }
+    },
+    "毎日の家": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DAILY HOUSES"
+          }
+        }
+      }
+    },
+    "毛玉にぶつかっても減りが半分": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Half damage from hairballs"
+          }
+        }
+      }
+    },
+    "点線がドックへの道。「帰りに ○%」を見て、欲張りすぎないうちに。記録はこの iPhone の中だけに残ります。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The dotted line leads to the dock. Watch \"Home %\" and don't get greedy. Your progress stays on this iPhone."
+          }
+        }
+      }
+    },
+    "省エネモーター": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eco Motor"
+          }
+        }
+      }
+    },
+    "磁石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Magnet"
+          }
+        }
+      }
+    },
+    "結果を見る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See results"
+          }
+        }
+      }
+    },
+    "続ける": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resume"
+          }
+        }
+      }
+    },
+    "練習": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Practice"
+          }
+        }
+      }
+    },
+    "練習モード": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Practice mode"
+          }
+        }
+      }
+    },
+    "練習モード（Pro）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Practice mode (Pro)"
+          }
+        }
+      }
+    },
+    "落とし物「%@」を持ち帰った": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brought home: %@"
+          }
+        }
+      }
+    },
+    "落とし物とパンくずを遠くから": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pulls lost items and crumbs from afar"
+          }
+        }
+      }
+    },
+    "落とし物図鑑": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lost & Found"
+          }
+        }
+      }
+    },
+    "落とし物図鑑 %d / %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LOST & FOUND %d / %d"
+          }
+        }
+      }
+    },
+    "設定": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "読み込み中…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading…"
+          }
+        }
+      }
+    },
+    "買えませんでした。少し待ってからもう一度どうぞ。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The purchase didn't go through. Please try again later."
+          }
+        }
+      }
+    },
+    "購入を復元": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore purchases"
+          }
+        }
+      }
+    },
+    "速いタイヤ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quick Wheels"
+          }
+        }
+      }
+    },
+    "進む速さ +18%": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move speed +18%"
+          }
+        }
+      }
+    },
+    "遊びそびれた日の家も掃除できる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Catch up on days you missed"
+          }
+        }
+      }
+    },
+    "遊び方をもう一度見る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show how to play again"
+          }
+        }
+      }
+    },
+    "遊んだ記録は、この iPhone の中だけに残ります。外へ送ったり集めたりしません。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your progress stays on this iPhone. Nothing is sent or collected."
+          }
+        }
+      }
+    },
+    "過去 30 日の家": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The last 30 days"
+          }
+        }
+      }
+    },
+    "過去 30 日の毎日の家": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last 30 days of daily houses"
+          }
+        }
+      }
+    },
+    "過去の家": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Past days"
+          }
+        }
+      }
+    },
+    "過去の家は Pro で遊べます。今日の家はいつでも無料です。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Past houses are part of Pro. Today's house is always free."
+          }
+        }
+      }
+    },
+    "部屋 %d / %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room %d of %d"
+          }
+        }
+      }
+    },
+    "部屋 %d/%d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ROOM %d/%d"
+          }
+        }
+      }
+    },
+    "部屋が 10 → 30 に": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 rooms instead of 10"
+          }
+        }
+      }
+    },
+    "閉じる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
           }
         }
       }
