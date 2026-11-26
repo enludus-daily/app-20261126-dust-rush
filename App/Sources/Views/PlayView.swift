@@ -12,14 +12,14 @@ struct PlayView: View {
             if sizeClass == .regular {
                 GeometryReader { geo in
                     // 右の板は画面の 4 割まで（狭い画面でも部屋が小さくなりすぎない）
-                    let panel = min(320, max(210, geo.size.width * 0.4))
+                    let panel = min(320, max(180, geo.size.width * 0.38))
                     HStack(spacing: 16) {
                         RoomStage()
                         VStack(spacing: 12) {
                             HudPanel(wide: true)
                             UpgradeShelf()
                             Spacer(minLength: 0)
-                            PlayButtons(stacked: panel < 280)
+                            PlayButtons(stacked: panel < 300)
                         }
                         .frame(width: panel)
                     }
@@ -143,7 +143,8 @@ struct HudPanel: View {
     var body: some View {
         let h = model.hud
         VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .firstTextBaseline) {
+            let titleLayout = wide ? AnyLayout(VStackLayout(alignment: .leading, spacing: 2)) : AnyLayout(HStackLayout(alignment: .firstTextBaseline))
+            titleLayout {
                 Eyebrow(text: model.isDaily ? trf("今日の家 %d/%d", "TODAY %d/%d", model.roomIndex + 1, model.rooms.count)
                                             : trf("部屋 %d/%d", "ROOM %d/%d", model.roomIndex + 1, model.rooms.count))
                 Text(model.room.title).font(Theme.body(14, weight: .bold)).foregroundStyle(Theme.ink).lineLimit(1).minimumScaleFactor(0.7)
@@ -153,15 +154,23 @@ struct HudPanel: View {
                         .padding(.horizontal, 8).padding(.vertical, 3).background(Capsule().fill(Theme.lavenderSoft))
                 }
             }
-            HStack(spacing: 12) {
+            if wide {
+                // 広い画面の右の板：充電の輪を上に、帯は幅いっぱいに
                 ChargeRing(ratio: h.chargeRatio, percent: h.charge, homeCost: h.homeCost)
-                VStack(alignment: .leading, spacing: 6) {
-                    BinBar(ratio: h.bin)
-                    CleanMeter(clean: h.clean)
+                BinBar(ratio: h.bin)
+                CleanMeter(clean: h.clean)
+            } else {
+                HStack(spacing: 12) {
+                    ChargeRing(ratio: h.chargeRatio, percent: h.charge, homeCost: h.homeCost)
+                    VStack(alignment: .leading, spacing: 6) {
+                        BinBar(ratio: h.bin)
+                        CleanMeter(clean: h.clean)
+                    }
                 }
             }
         }
-        .padding(wide ? 16 : 10)
+        .padding(wide ? 14 : 10)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .card()
     }
 }
