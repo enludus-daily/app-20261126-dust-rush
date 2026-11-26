@@ -1,21 +1,21 @@
 {
   "_doc": "App Store Connect に API で入れる情報（.github/workflows/asc.yml の metadata が読む）。文字数：name・subtitle 30、keywords 100（カンマ区切り）、promotionalText 170、description 4000。カテゴリの ID は EDUCATION・PRODUCTIVITY・UTILITIES・LIFESTYLE・HEALTH_AND_FITNESS など。審査への提出と App プライバシーの申告は本人が行う。",
   "locale": "ja",
-  "name": "",
-  "subtitle": "",
-  "primaryCategory": "",
-  "secondaryCategory": "",
+  "name": "すいこみロボ：充電が切れる前に帰れ",
+  "subtitle": "ほこりの群れを吸うロボ掃除機ゲーム",
+  "primaryCategory": "GAMES",
+  "secondaryCategory": "ENTERTAINMENT",
   "supportUrl": "https://github.com/enludus-daily/app-20261126-dust-rush/issues",
   "privacyPolicyUrl": "https://github.com/enludus-daily/app-20261126-dust-rush/blob/main/PRIVACY.md",
-  "keywords": "",
-  "promotionalText": "",
-  "description": "",
-  "whatToTest": "",
+  "keywords": "ロボット掃除機,掃除,ほこり,ローグライト,サバイバー,強化,充電,ドック,部屋,片付け,毎日,落とし物,カジュアル",
+  "promotionalText": "ロボット掃除機になって、家具の下からわき出すほこりの群れを吸いこむ。ゴミ箱がいっぱいになるたびに強化を選んで、充電が切れる前にドックへ帰れ。毎日ちがう 5 部屋。",
+  "description": "あなたはロボット掃除機。真上から見た昼の部屋で、ほこりの群れを吸いこみ、充電が切れる前にドックへ帰るゲームです。\n\n■ 遊び方\n・部屋を指でなぞると、その方へ進む。ブラシは自動で回って、近くのほこり・パンくず・毛玉を吸いこむ\n・通った床がぴかぴかになる。きれいさ 50%・70%・85% で星 1〜3\n・ゴミ箱がいっぱいになると、強化を 3 つから 1 つ選ぶ（サイドブラシ・速いタイヤ・大きな電池・吸う力・省エネモーター・ふかふかバンパー・磁石）\n・大きい毛玉にぶつかると充電が減る。吸いきるまで少し待つ\n・「帰りに ○%」と点線がドックへの道。充電が切れる前にドックへ帰ると、その部屋はクリア。帰れずに止まると、その回はおしまい\n・充電が減ってくると、部屋の隅に落とし物が出る。取りにいくと帰りはぎりぎり\n\n■ 中身\n・30 部屋（ワンルーム・台所・寝室・書斎・廊下・お風呂の前…）。おもちゃのブロックが道をふさぐ家、ねこやいぬの毛玉が多い家\n・5 部屋で 1 コース。強化は 5 部屋のあいだ続く\n・今日の家：日付で決まる 5 部屋。だれが開いても同じ家。続けた日数と、その日のいちばんの点\n・落とし物図鑑 30 種（片方の靴下、ギターのピック、小さな恐竜…）。それぞれに短い一言\n・結果は絵文字の 1 行で共有できる\n\n■ Pro（買い切り）\n・部屋が 10 → 30 に（コース 3〜6）\n・強化の候補が 4 つに\n・過去 30 日の毎日の家\n・ロボの色と形 5 種（ミント・ラベンダー・ピーチ・ねこ耳・おむすび）\n・充電が減らない練習モード\n\n記録はこの端末の中だけに残ります。外に送るデータはありません。",
+  "whatToTest": "ホームの「コース 1 をはじめる」か「今日の家を掃除」で始める。部屋をなぞってロボを動かし、ほこりを吸う。ゴミ箱がいっぱいになると強化を選ぶ画面が出る。「ドックへ帰る」で自動で帰り、ドックに着くと星が出る。充電が切れると、その回はおしまい。Pro はホームの右上の設定 > Pro を見る、またはコース 3 を押す。",
   "en-US": {
-    "name": "",
-    "subtitle": "",
-    "keywords": "",
-    "promotionalText": "",
-    "description": ""
+    "name": "Dust Rush: Robot Vacuum",
+    "subtitle": "Suck up dust, dock in time",
+    "keywords": "robot,vacuum,cleaning,dust,roguelite,survivor,upgrade,battery,dock,room,tidy,daily,casual,arcade",
+    "promotionalText": "Be a robot vacuum. Suck up swarms of dust bunnies, pick upgrades when your bin fills, and get back to the dock before the battery dies. 5 new rooms every day.",
+    "description": "You're a robot vacuum. In a sunny room seen from above, you hoover up swarms of dust and race back to your dock before the battery runs out.\n\nHOW TO PLAY\n- Drag across the room to drive. Your brushes spin on their own and pull in nearby dust, crumbs and hairballs\n- Every path you drive starts to shine. Reach 50%, 70% or 85% clean for 1 to 3 stars\n- When your dust bin fills, pick 1 of 3 upgrades: side brushes, quick wheels, a big battery, suction, an eco motor, a soft bumper or a magnet\n- Big hairballs drain your battery if you bump into them. Let the suction finish the job\n- \"Home %\" and the dotted line show the way back. Dock before the battery dies to clear the room. Run out on the way and the run is over\n- As your battery gets low, a lost item shows up in a far corner. Going for it makes the trip home tight\n\nWHAT'S INSIDE\n- 30 rooms: a studio, a kitchen, a bedroom, a study, a long hallway, a steamy washroom and more. Some are full of toy blocks, some are full of cat and dog fur\n- 5 rooms make a course, and your upgrades last the whole course\n- Today's house: 5 rooms picked by the date, the same for everyone. Streaks and your best score of the day\n- Lost & Found: 30 items to bring home (a lone sock, a guitar pick, a tiny dinosaur...), each with a one-line story\n- Share your run as a single line of emoji\n\nPRO (ONE-TIME PURCHASE)\n- 30 rooms instead of 10 (courses 3 to 6)\n- 4 upgrade choices instead of 3\n- The last 30 days of daily houses\n- 5 robot looks: mint, lavender, peach, cat ears and rice ball\n- Practice mode with no battery drain\n\nYour progress stays on this device. Nothing is sent anywhere."
   }
 }
