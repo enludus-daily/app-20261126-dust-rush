@@ -63,6 +63,8 @@ struct RoomDrawing {
     var hitFlash: Double = 0
     var showPath = true
     var mask: CGImage?
+    /// 案内の動く見本：通った道（白い太い線で光らせる）
+    var trail: [Vec] = []
 
     func draw(_ ctx: inout GraphicsContext, size: CGSize) {
         let map = RoomMap(size: size)
@@ -72,6 +74,13 @@ struct RoomDrawing {
         if let mask {
             let img = Image(decorative: mask, scale: 1).interpolation(.high)
             ctx.draw(img, in: map.roomRect)
+        }
+        if trail.count > 1 {
+            var p = Path()
+            p.move(to: map.pt(trail[0]))
+            for q in trail.dropFirst() { p.addLine(to: map.pt(q)) }
+            ctx.stroke(p, with: .color(Color(hex: tone(plan).base).opacity(0.85)), style: StrokeStyle(lineWidth: map.len(44), lineCap: .round, lineJoin: .round))
+            ctx.stroke(p, with: .color(.white.opacity(0.22)), style: StrokeStyle(lineWidth: map.len(44), lineCap: .round, lineJoin: .round))
         }
         // 壁（幅木）
         ctx.stroke(Path(roundedRect: map.roomRect.insetBy(dx: -map.len(3), dy: -map.len(3)), cornerRadius: map.len(6)),
@@ -88,6 +97,8 @@ struct RoomDrawing {
     func drawRobotOnly(_ ctx: inout GraphicsContext, size: CGSize) {
         drawRobot(&ctx, RoomMap(size: size))
     }
+
+    private func tone(_ plan: RoomPlan) -> (base: UInt32, seam: UInt32) { Theme.floors[plan.floor % Theme.floors.count] }
 
     private func drawFloor(_ ctx: inout GraphicsContext, _ map: RoomMap, _ plan: RoomPlan) {
         let tone = Theme.floors[plan.floor % Theme.floors.count]

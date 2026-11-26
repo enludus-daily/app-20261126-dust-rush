@@ -76,6 +76,22 @@ struct FloorGrid: Sendable {
     func nearestPassable(to p: Vec) -> Int {
         let k = index(of: p)
         if passable[k] { return k }
+        // まず近くの輪（6 マスまで）から探す
+        let ci = k % cols, cj = k / cols
+        for ring in 1...6 {
+            var best = -1, bestD = Double.infinity
+            for dj in -ring...ring {
+                for di in -ring...ring where abs(di) == ring || abs(dj) == ring {
+                    let ni = ci + di, nj = cj + dj
+                    guard ni >= 0, nj >= 0, ni < cols, nj < rows else { continue }
+                    let n = nj * cols + ni
+                    guard passable[n] else { continue }
+                    let d = center(n).distance(to: p)
+                    if d < bestD { bestD = d; best = n }
+                }
+            }
+            if best >= 0 { return best }
+        }
         var best = k, bestD = Double.infinity
         for n in 0..<passable.count where passable[n] {
             let d = center(n).distance(to: p)

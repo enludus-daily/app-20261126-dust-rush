@@ -4,6 +4,7 @@ import SwiftUI
 struct OnboardingView: View {
     @Environment(AppModel.self) private var model
     @State private var worlds: [World] = []
+    @State private var baseMask: CGImage?
 
     var body: some View {
         let page = model.onboardingPage
@@ -48,7 +49,12 @@ struct OnboardingView: View {
                 .frame(maxWidth: 560)
             }
         }
-        .onAppear { if worlds.isEmpty { worlds = OnboardingView.makeWorlds() } }
+        .onAppear {
+            if worlds.isEmpty {
+                worlds = OnboardingView.makeWorlds()
+                baseMask = MaskCache.make(worlds[0])
+            }
+        }
     }
 
     private func title(_ p: Int) -> String {
@@ -85,11 +91,14 @@ struct OnboardingView: View {
             // 動く見本：ロボがなぞった道を進み、床がぴかぴかになっていく（4 秒でくり返す）
             TimelineView(.animation(minimumInterval: 1.0 / 30, paused: model.still || model.reduceMotion)) { tl in
                 let t = model.still || model.reduceMotion ? 0.75 : tl.date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: 4) / 4
-                let w = OnboardingView.drive(worlds[0], progress: t)
                 Canvas { ctx, size in
-                    RoomDrawing(world: w, time: t * 4, skin: .snow, showPath: false, mask: MaskCache.make(w)).draw(&ctx, size: size)
-                    // 指の印
                     let map = RoomMap(size: size)
+                    // 床と膜は最初に作った 1 枚。通った道は白い太い線で光らせる（毎こま膜を作り直さない）
+                    var w = worlds[0]
+                    w.place(robotAt: OnboardingView.route(t))
+                    var drawing = RoomDrawing(world: w, time: t * 4, skin: .snow, showPath: false, mask: baseMask)
+                    drawing.trail = stride(from: 0.0, through: t, by: 0.02).map(OnboardingView.route)
+                    drawing.draw(&ctx, size: size)
                     let f = map.pt(OnboardingView.route(min(1, t + 0.12)))
                     ctx.fill(Path(ellipseIn: CGRect(x: f.x - 14, y: f.y - 14, width: 28, height: 28)), with: .color(Theme.lavenderDeep.opacity(0.25)))
                     ctx.stroke(Path(ellipseIn: CGRect(x: f.x - 14, y: f.y - 14, width: 28, height: 28)), with: .color(Theme.lavenderDeep.opacity(0.7)), lineWidth: 2)
@@ -114,13 +123,6 @@ struct OnboardingView: View {
         let i = min(pts.count - 2, Int(x))
         let f = x - Double(i)
         return pts[i] + (pts[i + 1] - pts[i]) * f
-    }
-
-    static func drive(_ base: World, progress t: Double) -> World {
-        var w = base
-        w.paint(stride(from: 0.0, through: t, by: 0.01).map(route), radius: 22)
-        w.place(robotAt: route(t))
-        return w
     }
 
     static func makeWorlds() -> [World] {
