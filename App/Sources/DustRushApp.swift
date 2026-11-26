@@ -142,16 +142,19 @@ enum Launch {
 
     /// 見本の部屋：自動の運転で seconds 秒だけ掃除したところ
     static func simulate(_ model: AppModel, seconds: Double, returnAt: Double = 0, until: ((World) -> Bool)? = nil) {
-        var m = Mower(world: model.world, returnAt: returnAt)
-        let dt = 1.0 / 60
+        // 画面の状態を毎こま書き換えると遅いので、World の写しで進めて最後に 1 回だけ戻す
+        var w = model.world
+        var m = Mower(world: w, returnAt: returnAt)
+        let dt = 1.0 / 30
         var t = 0.0
-        while t < seconds && model.world.phase == .playing {
-            if let until, until(model.world) { break }
-            if !model.world.awaitingChoice { model.autoDrive(&m) }
-            model.stage { $0.step(dt) }
-            model.stage { _ = $0.drainEvents() }
+        while t < seconds && w.phase == .playing {
+            if let until, until(w) { break }
+            if !w.awaitingChoice { m.drive(&w, dt: dt) }
+            w.step(dt)
+            _ = w.drainEvents()
             t += dt
         }
+        model.stage { $0 = w }
     }
 
     static func run(_ model: AppModel) async {
